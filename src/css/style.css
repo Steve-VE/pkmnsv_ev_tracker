@@ -1,0 +1,131 @@
+* {
+  font-family: monospace;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+#ev-selector {
+  width: 100%;
+  display: flex;
+}
+#ev-selector li {
+  display: inline-block;
+  flex-basis: 100%;
+}
+#ev-selector li button {
+  display: block;
+  width: 100%;
+  height: 32px;
+}
+#ev-selector li button:active {
+  background-color: black;
+  color: white;
+}
+#ev-selector li:last-child .label {
+  border-right: 0;
+}
+#ev-selector .label {
+  padding: 2px 0;
+  margin: 2px 0;
+  border-right: 1px solid gray;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pokemon {
+  padding: 8px 4px;
+  border-bottom: 1px solid lightgray;
+}
+@media (min-width: 1020px) {
+  .pokemon {
+    width: 50%;
+  }
+}
+.pokemon ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pokemon .name {
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.pokemon .item select {
+  width: 120px;
+}
+.pokemon .pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.pokemon .pokemon-header .btn-delete {
+  padding: 0 4px;
+  height: -moz-max-content;
+  height: max-content;
+}
+.pokemon .ev-track-line {
+  display: flex;
+  width: 50%;
+}
+.pokemon .ev-track-line .label {
+  width: 54px;
+  text-align: end;
+}
+.pokemon .ev-track-line .bar {
+  position: relative;
+  flex-grow: 1;
+  background-color: gray;
+  border: 1px solid gray;
+}
+.pokemon .ev-track-line .bar .bar-progress {
+  width: 0%;
+  height: 100%;
+  background-color: rgb(243, 202, 113);
+  transition: width 0.5s, background-color 0.5s;
+}
+.pokemon .ev-track-line .bar .bar-progress.good {
+  background-color: rgb(17, 245, 169);
+}
+.pokemon .ev-track-line .bar .bar-progress.excess {
+  background-color: rgb(134, 12, 12);
+}
+.pokemon .ev-track-line .bar .bar-target {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 1px;
+  height: 100%;
+  background-color: red;
+  transition: left 0.5s;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+footer button {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 12px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 46px;
+}/*# sourceMappingURL=style.css.map */

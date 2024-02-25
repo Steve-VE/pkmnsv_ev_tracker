@@ -1,0 +1,79 @@
+
+.pokemon {
+    padding: 8px 4px;
+    border-bottom: 1px solid lightgray;
+
+    @media (min-width: 1020px) {
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .name {
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .item {
+        select {
+            width: 120px;
+        }
+    }
+
+    .pokemon-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+
+        .btn-delete {
+            padding: 0 4px;
+            height: max-content;
+        }
+    }
+
+    .ev-track-line {
+        display: flex;
+        width: 50%;
+
+        .label {
+            width: 54px;
+            text-align: end;
+        }
+
+        .bar {
+            position: relative;
+            flex-grow: 1;
+            background-color: gray;
+            border: 1px solid gray;
+
+            .bar-progress {
+                width: 0%;
+                height: 100%;
+                background-color: rgb(243, 202, 113);
+                transition: width 0.5s, background-color 0.5s;
+
+                &.good {
+                    background-color: rgb(17, 245, 169);
+                }
+                &.excess {
+                    background-color: rgb(134, 12, 12);
+                }
+            }
+
+            .bar-target {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                width: 1px;
+                height: 100%;
+                background-color: red;
+                transition: left 0.5s;
+            }
+        }
+    }
+}

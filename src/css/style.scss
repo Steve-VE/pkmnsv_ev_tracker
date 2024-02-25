@@ -1,0 +1,16 @@
+@use "parts/_reset";
+@use "parts/_ev_selector";
+@use "parts/_pokemon";
+@use "parts/_footer";
+
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 46px;
+}
